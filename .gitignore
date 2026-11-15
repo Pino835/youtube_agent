@@ -1,0 +1,19 @@
+# Credenciales y variables de entorno
+.env
+client_secret.json
+token.json
+
+# Entorno virtual
+.venv/
+venv/
+
+# Documentación interna
+CLAUDE.md
+
+# Salidas generadas
+salidas/
+
+# Python
+__pycache__/
+*.pyc
+*.egg-info/

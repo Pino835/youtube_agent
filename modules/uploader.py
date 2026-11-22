@@ -126,10 +126,13 @@ def subir_video(
     if not ruta_video.exists():
         raise ErrorArchivoNoEncontrado(f"No se encontró el archivo de video en '{ruta_video}'.")
 
+    hashtags = " ".join(f"#{tag.replace(' ', '')}" for tag in etiquetas)
+    descripcion_con_hashtags = f"{descripcion}\n\n{hashtags}"
+
     cuerpo_peticion = {
         "snippet": {
             "title": titulo,
-            "description": descripcion,
+            "description": descripcion_con_hashtags,
             "tags": etiquetas,
             "categoryId": CATEGORIA_YOUTUBE_POR_DEFECTO,
         },
